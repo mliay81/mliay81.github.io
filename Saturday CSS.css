@@ -1,0 +1,45 @@
+/* Saturday CSS Work */
+
+p {
+    background-color: antiquewhite;
+}
+
+#box {
+    background-color: aquamarine;
+    width: 200px;
+    height: 240px;
+    margin: 10px 30px 50px 20px;
+    color: red;
+    padding: 10px 40px 10px 30px;
+    border-style: solid;
+    border-width: 22px;
+    border-color: #113152;
+}
+
+#box2 {
+    background-color: bisque;
+    width: 400px;
+    height: 440px;
+}
+
+#floatleft {
+    float: left;
+}
+
+#floatright {
+    float: right;
+}
+
+.clearFix::after {
+    content: "";
+    clear: both;
+}
+
+#margin1 {
+    margin: 20px 20px 20px 100px;
+}
+
+#margin2 {
+    margin-top: 50px;
+    margin-right: 300px;
+}
