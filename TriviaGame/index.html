@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minnesota Music Trivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+        <div class="card" style="width: 700px;" id="start">
+                <div class="card-body">
+                  <h5 class="card-title">Minnesota Music Quiz!</h5>
+                  <br>
+                  <button id="begin">Start the quiz</button>
+                </div>
+        </div>
+              <div class="card" style="width: 700px;" id="quiz">
+                    <div class="card-body">
+                      <h5 class="card-title">Minnesota Music Quiz!</h5>
+                      <h6 id="timer">Time Remaining: 120</h6>
+                      <hr>
+                    <div class="text">
+                      <p>1. Which Twin Cities band scored the one-hit wonder "Surfin' Bird?"</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer incorrect"> Husker Du
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> The Time
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" value="correct" class="correct"> The Trashmen
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Lizzo
+                            </label>
+                        </form>
+                        <br>
+                        <p>2. Who was the original drummer for The Replacements?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" value="correct" class="correct"> Chris Mars
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Ringo Starr
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Bob Mould
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> John Blackwell Jr.
+                            </label>
+                        </form>
+                        <br>
+                        <p>3. Sean Tillmann also performed under what moniker, besides Har Mar Superstar?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer incorrect"> Night Moves
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> The Horrors
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> The Suburbs
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" value="correct" id="correct" class="correct"> Sean Na Na
+                            </label>
+                        </form>
+                        <br>
+                        <p>4. Craig Finn fronted which band before The Hold Steady?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer correct" value="correct" id="correct"> Lftr Pllr
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> The Revolution
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Cut Copy
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Koo Koo Kangaroo
+                            </label>
+                        </form>
+                        <br>
+                        <p>5. In what Minnesota city was Bob Dylan born?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer incorrect"> Hibbing
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> St. Paul
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" value="correct" id="correct" class="correct"> Duluth
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Ely
+                            </label>
+                        </form>
+                        <br>
+                        <p>6. Prince's album Purple Rain was recorded live at which Minneapolis landmark?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer incorrect"> The Metrodome
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" value="correct" id="correct" class="correct"> First Avenue
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> The Mall of America
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> The Turf Club
+                            </label>
+                        </form>
+                        <br>
+                        <p>7. Tony Zaccardi just purchased which long-standing Twin Cities dive bar?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer correct" value="correct" id="correct"> Palmer's
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Grumpy's
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> The Triple Rock
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Vegas Lounge
+                            </label>
+                        </form>
+                        <br>
+                        <p>8. Which local 90's band took their name from the movie "It's A Wonderful Life?"?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer incorrect"> Soul Asylum
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Babes In Toyland
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" value="correct" id="correct" class="correct"> Zuzu's Petals
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Dillinger Four
+                            </label>
+                        </form>
+                        <br>
+                        <p>9. What is the name of Morris Day's valet?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer incorrect"> Bobby Stinson
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" value="correct" id="correct" class="correct"> Jerome Benton
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Dan Wilson
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Lori Barbero
+                            </label>
+                        </form>
+                        <br>
+                        <p>10. A new local hip hop group is named after which comic book villain?</p>
+                        <form>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="answer incorrect"> The Joker
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" value="correct" id="correct" class="correct"> Shredder
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Kingpin
+                            </label>
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio" class="incorrect"> Lex Luthor
+                            </label>
+                        </form>
+                        <br>
+                        <button id="submit">Results</button>
+                    </div>
+                    </div>
+                  </div>
+ 
+        <div class="card" style="width: 700px;" id="finish">
+                <div class="card-body">
+                  <h5 class="card-title">Results!</h5>
+                  <div id="picture"><img id="prince" class="center" src="assets/images/prince.gif" height="250px" width="450px"></div>
+                  <div id="picture"><img id="harmar" class="center" src="assets/images/harmar.gif" height="500px" width="300px"></div>
+                  <div id="picture"><img id="themats" class="center" src="assets/images/the-replacements.jpg" height="300px" width="350px"></div>
+                </div> 
+        </div>
+
+</body>
+</html>
