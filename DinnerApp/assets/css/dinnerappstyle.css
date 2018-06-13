@@ -1,0 +1,16 @@
+.bg-primary {
+    background-color: aqua;
+}
+
+.card {
+    box-align: center;
+}
+
+body {
+    background-color: lightgray;
+}
+
+#footer {
+    margin-top: 110px;
+    height: 44px;
+}
