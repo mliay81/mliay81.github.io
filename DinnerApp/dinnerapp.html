@@ -9,42 +9,48 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/dinnerappstyle.css" />
 </head>
 <body>
-    <!-- Image and text -->
+    <!-- How can I keep the box from changing size after writing the result in? -->
         <nav class="navbar navbar-dark bg-primary" id="header">
             <a class="navbar-brand" href="#">
-            <img src="assets/dinner_images/Curler.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-                Bootstrap
+            <img src="assets/dinner_images/breakfast_cat.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+                What's for dinner?
             </a>
         </nav>
         <br>
     <div id="test"></div>
         
-<div class="card mx-auto" style="width: 18rem;">
+<div class="card mx-auto" id="restaurantCard" style="width: 18rem;" >
     <div class="card-body">
         <h5 class="card-title">Pick a restaurant</h5>
-        <p class="card-text" id="place"></p>
-        <a href="#" class="btn btn-primary">Find a restaurant!</a>
+        <p class="card-text" id="place">
+
+        </p>
+        <a href="#" class="btn btn-primary" id="restaurantButton">Find a restaurant!</a>
     </div>
 </div>
 
 <br>
 
+<div class="card mx-auto" id="or" style="width: 6rem;  height: 4rem;">
+    <div class="card-body">
+        <h5 class="card-title">Or...</h5>
+    </div>
+</div>
+
+<!-- <div id="or">
+    Or...
+</div> -->
+
+<br>
                   
 <div class="card mx-auto" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Pick a cuisine</h5>
         <p class="card-text" id="cuisine"></p>
-        <a href="#" class="btn btn-primary">Get a cuisine!</a>
+        <a href="#" class="btn btn-primary" id="cuisineButton">Get a cuisine!</a>
     </div>
 </div>
-
-<!-- Just an image -->
-<nav class="navbar navbar-light bg-light" id="footer">
-        <a class="navbar-brand" href="#">
-          <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-        </a>
-      </nav>
-                        
+            
 
 </body>
 </html>
