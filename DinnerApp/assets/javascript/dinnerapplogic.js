@@ -172,4 +172,12 @@ var cuisines = [
         $("#place").text(randomRestaurant)
     })
 
+    $("#restaurantClear").click(function() {
+        $("#place").empty()
+    })
+
+    $("#cuisineClear").click(function() {
+        $("#cuisine").empty()
+    })
+
 });
