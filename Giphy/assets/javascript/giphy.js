@@ -56,8 +56,9 @@ function renderButtons() {
                 var p = $("<p>").text("Rating: " + results[i].rating)
                 var searchResults = $("<img>")
                 searchResults.attr("src", results[i].images.fixed_height.url)
-                searchResults.append(p)
-                $("#gif-display").prepend(searchResults)
+                resultsDiv.append(p)
+                resultsDiv.append(searchResults)
+                $("#gif-display").prepend(resultsDiv)
             }
 
         })
