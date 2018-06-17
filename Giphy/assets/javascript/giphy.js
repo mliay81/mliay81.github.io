@@ -4,7 +4,7 @@ $( document ).ready(function() {
     // var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=Tq8B7KEcSY0bdgmhn4vfbe2YTtWbbpEi&limit=5");
     // xhr.done(function(data) { console.log("success got data", data); });
 
-    var topics = ["Star Trek", "Star Wars", "Seinfeld", "cats", "hedgehogs", "hockey", "Batman"]
+    var topics = ["Star Trek", "Star Wars", "Seinfeld", "cats", "hedgehogs", "hockey", "Batman", "30 Rock"]
 
     // Time to make the buttons
 function renderButtons() {
@@ -24,7 +24,7 @@ function renderButtons() {
 
 
 
-//TODO - Why do these disappear when I click them?????
+//FIXED - Why do these disappear when I click them?????
  $("#search-button").on("click", function(event) {
     event.preventDefault()
     var userSearch = $("#gif-search").val().trim()
@@ -38,9 +38,11 @@ function renderButtons() {
 
 
 
-// TODO Why is it only giving me gifs when I hit the search button?
-    $("button").click(function() {
+// FIXED - Why is it only giving me the same gifs when I hit the search button?
+    $("#buttons").on("click", ".userChoice", function(event) {
+        event.preventDefault()
         var gifs = $(this).attr("gif-subject")
+        console.log(gifs)
         // This chunk of code will perform the giphy search based on the value of the button
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifs + "&api_key=Tq8B7KEcSY0bdgmhn4vfbe2YTtWbbpEi&limit=5"
         
@@ -55,13 +57,37 @@ function renderButtons() {
                 var resultsDiv = $("<div>")
                 var p = $("<p>").text("Rating: " + results[i].rating)
                 var searchResults = $("<img>")
-                searchResults.attr("src", results[i].images.fixed_height.url)
-                resultsDiv.append(p)
+                // searchResults.attr("src", results[i].images.fixed_height.url)
+                // // New, let's see.
+                searchResults.attr("src", results[i].images.fixed_height_still.url)
+                searchResults.attr({"data-still" : results[i].images.fixed_height_still.url})
+                searchResults.attr({"data-animate" : results[i].images.fixed_height.url})
+                searchResults.attr({"data-state" : "still"})
+                searchResults.addClass("gif")
+                // searchResults.attr({"data-state" : "animate"})
+                // New, let's see
                 resultsDiv.append(searchResults)
+                resultsDiv.append(p)
                 $("#gif-display").prepend(resultsDiv)
             }
 
         })
+
+        $(".gif").on("click", function() {
+            // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+            var state = $(this).attr("data-state");
+            // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+            // Then, set the image's data-state to animate
+            // Else set src to the data-still value
+            if (state === "still") {
+              $(this).attr("src", $(this).attr("data-animate"));
+              $(this).attr("data-state", "animate");
+            } else {
+              $(this).attr("src", $(this).attr("data-still"));
+              $(this).attr("data-state", "still");
+            }
+        });
+
     })
 
 
