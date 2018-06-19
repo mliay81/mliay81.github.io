@@ -4,7 +4,7 @@ $( document ).ready(function() {
     // var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=Tq8B7KEcSY0bdgmhn4vfbe2YTtWbbpEi&limit=5");
     // xhr.done(function(data) { console.log("success got data", data); });
 
-    var topics = ["Star Trek", "Star Wars", "Seinfeld", "Cats", "Hedgehogs", "Hockey", "Batman", "30 Rock"]
+    var topics = ["Star Trek", "Star Wars", "Doctor Who", "Seinfeld", "Cats", "Hedgehogs", "Hockey", "Batman", "30 Rock"]
 
     // Time to make the buttons
 function renderButtons() {
@@ -29,7 +29,7 @@ function renderButtons() {
     event.preventDefault()
     var userSearch = $("#gif-search").val().trim()
     topics.push(userSearch)
-    $("#gif-search").empty()
+    $("#gif-search").val("")
     // $("#gif-search").each(function() {
     //     $(this).empty()
     // })
@@ -45,7 +45,7 @@ function renderButtons() {
         var gifs = $(this).attr("gif-subject")
         console.log(gifs)
         // This chunk of code will perform the giphy search based on the value of the button
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifs + "&api_key=Tq8B7KEcSY0bdgmhn4vfbe2YTtWbbpEi&limit=5"
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifs + "&api_key=Tq8B7KEcSY0bdgmhn4vfbe2YTtWbbpEi&limit=10"
         
         $.ajax({
             url: queryURL,
@@ -76,8 +76,9 @@ function renderButtons() {
         })
     })
 
-    $(".gif").on("click", function() {
+    $("body").on("click", ".gif", function() {
         var state = $(this).attr("data-state");
+        console.log("clicked!")
         // If the clicked image's state is still, update its src attribute to what its data-animate value is.
         // Then, set the image's data-state to animate
         // Else set src to the data-still value
