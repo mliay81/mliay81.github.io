@@ -1,8 +1,56 @@
 .button {
     margin: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid red;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* #search-button {
-    float: right;
+#search-button {
+    margin: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid red;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
 
-} */
+#gif-search {
+   border: 2px solid;
+   font-family: 'Roboto', sans-serif;
+   height: 27px;
+   font-size: 18px;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px; 
+}
+
+.header {
+    background-color:lightgrey;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 1px;
+
+}
+
+#gif-display {
+    margin-left: 10px;
+}
