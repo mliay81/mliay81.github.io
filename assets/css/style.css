@@ -1,0 +1,38 @@
+body {
+    background-image: url("../images/grainbeltsign.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#blurb {
+    border: 1px solid white;
+    background: white;
+    width: 600px;
+    margin: auto;
+    background-color: #f8f9fa;
+    border-radius: .25rem;
+    align-content: center;
+}
+
+#profile {
+    float: left;
+}
+
+
+#cards {
+    margin-top: 8%;;
+}
+
+li {
+    padding-right: 15px;
+}
+
+a {
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .col-lg-3 {
+        width: 15%;
+      }
+}
