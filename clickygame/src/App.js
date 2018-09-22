@@ -77,12 +77,17 @@ class App extends Component {
   // Map over this.state.friends and render a Card component for each friend object
   render() {
     return (
+    <body>
+      <Jumbotron
+      correctGuess={this.state.correctGuess}
+      bestScore={this.state.bestScore}
+    />
       <Wrapper>
         {/* <Title>Engage!</Title> */}
 
-      <Jumbotron />
+     
 
-        <h3 className="scoreSummary">
+        {/* <h3 className="scoreSummary">
           {this.state.clickMessage}
         </h3>
 
@@ -90,7 +95,7 @@ class App extends Component {
         Correct Guesses: {this.state.correctGuess}
         <br />
         Top Score: {this.state.bestScore}
-      </h3>
+      </h3> */}
 
         {this.state.friends.map(friend => (
           <Card
@@ -104,6 +109,7 @@ class App extends Component {
           />
         ))}
       </Wrapper>
+    </body>
     );
   }
 }

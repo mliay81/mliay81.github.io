@@ -1,16 +1,16 @@
 import React from 'react';
-import { Jumbotron, Container } from 'reactstrap';
+// import { Jumbotron, Container } from 'reactstrap';
+import "./Jumbotron.css"
+
 
 const Jumbotron = (props) => {
   return (
-    <div>
-      <Jumbotron fluid>
-        <Container fluid>
-          <h1 className="display-3">Engage!</h1>
-          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </Container>
-      </Jumbotron>
-    </div>
+    <div className="jumbotron">
+    <h1 className="display-4">Engage!</h1>
+    <p className="lead">Click each picture to earn points, but don't click an image more than once!</p>
+    <p className="lead">Correct Guesses: {props.correctGuess}</p>
+    <p className="lead">Top Score: {props.bestScore}</p>
+  </div>
   );
 };
 
