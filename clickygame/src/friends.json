@@ -58,5 +58,10 @@
       "id": 12,
       "name": "Q",
       "image": "http://www.startrek.com/uploads/assets/db_articles/8b4b2d89416c8cadeb2d4973a2521a167d84b37d.jpg"
+    },
+    {
+      "id": 13,
+      "name": "General Martok",
+      "image": "https://vignette.wikia.nocookie.net/memoryalpha/images/d/d1/Martok_2373.jpg/revision/latest?cb=20060810144356&path-prefix=en"
     }
   ]
