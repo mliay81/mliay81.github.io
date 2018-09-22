@@ -36,7 +36,7 @@ class App extends Component {
       this.setState({clickMessage})
       this.setState({correctGuess})
       this.setState({friends})
-    } else if (correctGuess < 12) {
+    } else if (correctGuess < 11) {
       clickedMatch[0].clicked = true
 
       correctGuess++
@@ -58,7 +58,7 @@ class App extends Component {
       correctGuess = 0
 
       clickMessage = "Got 'em!"
-      bestScore = 13
+      bestScore = 12
       this.setState({bestScore})
 
       for (let i = 0; i < friends.length; i++) {
