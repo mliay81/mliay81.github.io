@@ -4,10 +4,12 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
 import "./App.css";
+import Jumbotron from "./components/Jumbotron"
 
 let correctGuess = 0
 let bestScore = 0
-let clickMessage = "Click each picture to earn points, but don't click an image more than once!"
+let clickMessage = ""
+// Click each picture to earn points, but don't click an image more than once!
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -76,7 +78,9 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Engage!</Title>
+        {/* <Title>Engage!</Title> */}
+
+      <Jumbotron />
 
         <h3 className="scoreSummary">
           {this.state.clickMessage}
