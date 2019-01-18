@@ -1,4 +1,10 @@
 body {
+    background: white;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.jumbotron {
     background-image: url("../images/grainbeltsign.jpg");
     background-repeat: no-repeat;
     background-size: auto;
