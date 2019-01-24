@@ -29,6 +29,7 @@ body {
     border-radius: .25rem;
     align-content: center;
     padding: 5px;
+    display: inline-block;
 }
 
 #pic {
