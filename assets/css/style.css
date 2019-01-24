@@ -21,15 +21,12 @@ body {
 }
 
 #contact {
-    border: 1px solid white;
     background: white;
+    background-color: lightgrey;
+    border: 1px solid white;
     width: 600px;
-    margin: auto;
-    background-color: #f8f9fa;
     border-radius: .25rem;
-    align-content: center;
     padding: 5px;
-    display: inline-block;
 }
 
 #pic {
